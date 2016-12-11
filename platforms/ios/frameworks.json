@@ -1,0 +1,10 @@
+{
+    "ImageIO.framework": 2,
+    "CoreLocation.framework": 2,
+    "AVFoundation.framework": 2,
+    "QuartzCore.framework": 2,
+    "Accelerate.framework": 1,
+    "Security.framework": 1,
+    "Photos.framework": 1,
+    "SystemConfiguration.framework": 1
+}

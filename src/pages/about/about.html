@@ -6,7 +6,14 @@
     </ion-navbar>
 </ion-header>
 <ion-content padding>
-    <div class="fileinput-preview thumbnail">
-        <img src={{Uri}}>
-    </div>
+    <ion-card>
+        <ion-card-content>
+            <div class="fileinput-preview thumbnail">
+   
+                <img [src]='base64Image' *ngIf="base64Image" />
+           
+            
+            </div>
+        </ion-card-content>
+    </ion-card>
 </ion-content>

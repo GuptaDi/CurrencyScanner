@@ -14,21 +14,29 @@ declare var plugins: any;
 
 export class AboutPage {
 
-  Uri;
+  base64Image: string;
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) {
+    //this.base64Image = '';
+  }
 
  ionViewWillEnter() {
-    // Put here the code you want to execute
+   this.base64Image = 'note.JPG';
+   //  Put here the code you want to execute
     Camera.getPicture({ quality: 100 }).then(
     	(imageData) => 
     	{ 
-    		console.log("Inside");
+        //this.base64Image = imageData;
+    		//console.log("Inside");
+        var me = this;
     		plugins.imagecrop(function success (Uri) {
+
+          me.base64Image = Uri.URI;
+          console.log("Image path is "+me.base64Image);
           //this.Uri = Uri;
           console.log("Uri is :");
           console.log(Uri);
-          this.Uri = Uri;
+          //base64Image = Uri;
             },
             function fail () {
                  error => console.error("Error cropping image", error)

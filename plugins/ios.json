@@ -1,0 +1,53 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-ImageCrop": {
+            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
+        },
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "179021185898904",
+            "APP_NAME": "6ad1a44eeed9236bd3af1679209557bb",
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
+        }
+    }
+}
