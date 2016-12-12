@@ -43,6 +43,10 @@
             "APP_ID": "179021185898904",
             "APP_NAME": "6ad1a44eeed9236bd3af1679209557bb",
             "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-googleplus": {
+            "REVERSED_CLIENT_ID": "164249078900-u78lqheu8m9rq2dqj74v7l3htdq5jqt0.apps.googleusercontent.com",
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         }
     },
     "dependent_plugins": {

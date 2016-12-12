@@ -4,6 +4,10 @@ import { NavController } from 'ionic-angular';
 
 import { Camera, ImagePicker } from 'ionic-native';
 
+import {Http,Headers,RequestOptions} from '@angular/http';
+
+import {AppServices} from '../../app/app.services';
+
 declare var plugins: any;
 
 @Component({

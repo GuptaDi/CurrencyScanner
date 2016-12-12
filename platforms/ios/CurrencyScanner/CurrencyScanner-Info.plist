@@ -54,6 +54,8 @@
           <key>NSIncludesSubdomains</key>
           <true/>
         </dict>
+        <key>accounts.google.com</key>
+        <dict/>
       </dict>
       <key>NSAllowsArbitraryLoads</key>
       <true/>
@@ -74,6 +76,16 @@
         <key>CFBundleURLSchemes</key>
         <array>
           <string>fb179021185898904</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>REVERSED_CLIENT_ID</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>164249078900-u78lqheu8m9rq2dqj74v7l3htdq5jqt0.apps.googleusercontent.com</string>
         </array>
       </dict>
     </array>

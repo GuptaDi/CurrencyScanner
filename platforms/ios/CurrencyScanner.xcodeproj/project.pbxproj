@@ -62,6 +62,19 @@
 		4089C0DC1D4449BE9F0C8225 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9073A8C4AE44D98E023DBE /* FBSDKCoreKit.framework */; };
 		D92EF0FFA94045C1B02CDE42 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5BA690175942B696E61371 /* FBSDKLoginKit.framework */; };
 		087162CC9F6142C38906EA79 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3275B82D54174499ADF56374 /* FBSDKShareKit.framework */; };
+		AC2B61C9A9DE4FCBA2DF3064 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A8E1CBCFF2456384C9C197 /* GooglePlus.m */; };
+		DF28B45ACB274E2DB796CB45 /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED288B9AF79848429B084C97 /* GoogleAppUtilities.framework */; };
+		49EA7B435B89442ABEE8709A /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C675B686FDF6464DA2AC0509 /* GoogleAuthUtilities.framework */; };
+		CCA6A3A8E61F404C8A4FB4E4 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CB884959BB4ED79185A719 /* GoogleNetworkingUtilities.framework */; };
+		4134476CDC6645229E803843 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D797055B1B2A4E56960034DF /* GoogleSignIn.framework */; };
+		3DB93875D9F7495587ABDABE /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF8858CB36E45B5A7E3E072 /* GoogleSymbolUtilities.framework */; };
+		CBCFFAF64AC441CC9170B04A /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140D4CAD402F4E9FA0B258BB /* GoogleUtilities.framework */; };
+		5190092E18CF470FAC597CD8 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934B5535CF4D47B88FB6B612 /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		280A2869B7A84E4CBDB1DB79 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCFB3FC86F34F3C910627C4 /* CoreText.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DCAD2749E1224A849FDE753B /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED8AD100B084389A90D0267 /* SafariServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EBF2F3197D4345BC9CB4F9E5 /* libz.tbd in Resources */ = {isa = PBXBuildFile; fileRef = 72F86DEBDEE5433AAA88CADB /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D69C495D9B7D468FB7ECF00D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4ED01DF8A7463CABA36DB0 /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7F643A6FED2D4441B9F20823 /* CurrencyScanner.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = B418EF0F33FD4BD087406220 /* CurrencyScanner.entitlements */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +184,20 @@
 		2E9073A8C4AE44D98E023DBE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; name = "FBSDKCoreKit.framework"; path = "CurrencyScanner/Plugins/cordova-plugin-facebook4/FBSDKCoreKit.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		6C5BA690175942B696E61371 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; name = "FBSDKLoginKit.framework"; path = "CurrencyScanner/Plugins/cordova-plugin-facebook4/FBSDKLoginKit.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		3275B82D54174499ADF56374 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; name = "FBSDKShareKit.framework"; path = "CurrencyScanner/Plugins/cordova-plugin-facebook4/FBSDKShareKit.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B6A8E1CBCFF2456384C9C197 /* GooglePlus.m */ = {isa = PBXFileReference; name = "GooglePlus.m"; path = "cordova-plugin-googleplus/GooglePlus.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		61F0BFCE6656410C8FF0050B /* GooglePlus.h */ = {isa = PBXFileReference; name = "GooglePlus.h"; path = "cordova-plugin-googleplus/GooglePlus.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		ED288B9AF79848429B084C97 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; name = "GoogleAppUtilities.framework"; path = "CurrencyScanner/Plugins/cordova-plugin-googleplus/GoogleAppUtilities.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C675B686FDF6464DA2AC0509 /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; name = "GoogleAuthUtilities.framework"; path = "CurrencyScanner/Plugins/cordova-plugin-googleplus/GoogleAuthUtilities.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		D7CB884959BB4ED79185A719 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; name = "GoogleNetworkingUtilities.framework"; path = "CurrencyScanner/Plugins/cordova-plugin-googleplus/GoogleNetworkingUtilities.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		D797055B1B2A4E56960034DF /* GoogleSignIn.framework */ = {isa = PBXFileReference; name = "GoogleSignIn.framework"; path = "CurrencyScanner/Plugins/cordova-plugin-googleplus/GoogleSignIn.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		EDF8858CB36E45B5A7E3E072 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; name = "GoogleSymbolUtilities.framework"; path = "CurrencyScanner/Plugins/cordova-plugin-googleplus/GoogleSymbolUtilities.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		140D4CAD402F4E9FA0B258BB /* GoogleUtilities.framework */ = {isa = PBXFileReference; name = "GoogleUtilities.framework"; path = "CurrencyScanner/Plugins/cordova-plugin-googleplus/GoogleUtilities.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		934B5535CF4D47B88FB6B612 /* AddressBook.framework */ = {isa = PBXFileReference; name = "AddressBook.framework"; path = "System/Library/Frameworks/AddressBook.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		ABCFB3FC86F34F3C910627C4 /* CoreText.framework */ = {isa = PBXFileReference; name = "CoreText.framework"; path = "System/Library/Frameworks/CoreText.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		7ED8AD100B084389A90D0267 /* SafariServices.framework */ = {isa = PBXFileReference; name = "SafariServices.framework"; path = "System/Library/Frameworks/SafariServices.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		72F86DEBDEE5433AAA88CADB /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "libz.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3D4ED01DF8A7463CABA36DB0 /* libz.dylib */ = {isa = PBXFileReference; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		B418EF0F33FD4BD087406220 /* CurrencyScanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "CurrencyScanner.entitlements"; path = "CurrencyScanner.entitlements"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +218,17 @@
 				4089C0DC1D4449BE9F0C8225 /* FBSDKCoreKit.framework in Frameworks */,
 				D92EF0FFA94045C1B02CDE42 /* FBSDKLoginKit.framework in Frameworks */,
 				087162CC9F6142C38906EA79 /* FBSDKShareKit.framework in Frameworks */,
+				DF28B45ACB274E2DB796CB45 /* GoogleAppUtilities.framework in Frameworks */,
+				49EA7B435B89442ABEE8709A /* GoogleAuthUtilities.framework in Frameworks */,
+				CCA6A3A8E61F404C8A4FB4E4 /* GoogleNetworkingUtilities.framework in Frameworks */,
+				4134476CDC6645229E803843 /* GoogleSignIn.framework in Frameworks */,
+				3DB93875D9F7495587ABDABE /* GoogleSymbolUtilities.framework in Frameworks */,
+				CBCFFAF64AC441CC9170B04A /* GoogleUtilities.framework in Frameworks */,
+				5190092E18CF470FAC597CD8 /* AddressBook.framework in Frameworks */,
+				280A2869B7A84E4CBDB1DB79 /* CoreText.framework in Frameworks */,
+				DCAD2749E1224A849FDE753B /* SafariServices.framework in Frameworks */,
+				EBF2F3197D4345BC9CB4F9E5 /* libz.tbd in Resources */,
+				D69C495D9B7D468FB7ECF00D /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +303,7 @@
 				8F0E511E2E67484288F943A7 /* fr.lproj */,
 				D149F7941E484DD3B1AB4AD7 /* it.lproj */,
 				D9213347800943D0B63CA88E /* pt.lproj */,
+				B418EF0F33FD4BD087406220 /* CurrencyScanner.entitlements */,
 			);
 			name = Resources;
 			path = "CurrencyScanner/Resources";
@@ -285,6 +324,17 @@
 				2E9073A8C4AE44D98E023DBE /* FBSDKCoreKit.framework */,
 				6C5BA690175942B696E61371 /* FBSDKLoginKit.framework */,
 				3275B82D54174499ADF56374 /* FBSDKShareKit.framework */,
+				ED288B9AF79848429B084C97 /* GoogleAppUtilities.framework */,
+				C675B686FDF6464DA2AC0509 /* GoogleAuthUtilities.framework */,
+				D7CB884959BB4ED79185A719 /* GoogleNetworkingUtilities.framework */,
+				D797055B1B2A4E56960034DF /* GoogleSignIn.framework */,
+				EDF8858CB36E45B5A7E3E072 /* GoogleSymbolUtilities.framework */,
+				140D4CAD402F4E9FA0B258BB /* GoogleUtilities.framework */,
+				934B5535CF4D47B88FB6B612 /* AddressBook.framework */,
+				ABCFB3FC86F34F3C910627C4 /* CoreText.framework */,
+				7ED8AD100B084389A90D0267 /* SafariServices.framework */,
+				72F86DEBDEE5433AAA88CADB /* libz.tbd */,
+				3D4ED01DF8A7463CABA36DB0 /* libz.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -355,6 +405,8 @@
 				B2AC0E6F88E24B7AB3848844 /* GMPHAsset.h */,
 				6F3AB3F3C428401BA5E2CA61 /* FacebookConnectPlugin.m */,
 				C9CEEEF21B21431EA68A2281 /* FacebookConnectPlugin.h */,
+				B6A8E1CBCFF2456384C9C197 /* GooglePlus.m */,
+				61F0BFCE6656410C8FF0050B /* GooglePlus.h */,
 			);
 			name = Plugins;
 			path = "CurrencyScanner/Plugins";
@@ -451,6 +503,7 @@
 				CC0CC78D48C7485D98768140 /* fr.lproj in Resources */,
 				9715F673F68247A588871528 /* it.lproj in Resources */,
 				A23E4B6352B94FBDAA0DCEDB /* pt.lproj in Resources */,
+				7F643A6FED2D4441B9F20823 /* CurrencyScanner.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +557,7 @@
 				6F834928BFCB4CC3983F8BE7 /* PSYBlockTimer.m in Sources */,
 				C70FAA5F3E6944409D2D41E1 /* GMPHAsset.m in Sources */,
 				B5078D4BA0904CF4BD81C700 /* FacebookConnectPlugin.m in Sources */,
+				AC2B61C9A9DE4FCBA2DF3064 /* GooglePlus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +597,14 @@
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
 				);
+				CODE_SIGN_ENTITLEMENTS = "CurrencyScanner/Resources/CurrencyScanner.entitlements";
 			};
 			name = Debug;
 		};
@@ -569,7 +630,14 @@
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
 				);
+				CODE_SIGN_ENTITLEMENTS = "CurrencyScanner/Resources/CurrencyScanner.entitlements";
 			};
 			name = Release;
 		};
@@ -603,7 +671,14 @@
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
 				);
+				CODE_SIGN_ENTITLEMENTS = "CurrencyScanner/Resources/CurrencyScanner.entitlements";
 			};
 			name = Debug;
 		};
@@ -636,7 +711,14 @@
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
 					"\"CurrencyScanner/Plugins/cordova-plugin-facebook4\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
+					"\"CurrencyScanner/Plugins/cordova-plugin-googleplus\"",
 				);
+				CODE_SIGN_ENTITLEMENTS = "CurrencyScanner/Resources/CurrencyScanner.entitlements";
 			};
 			name = Release;
 		};

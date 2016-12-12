@@ -79,6 +79,14 @@
                         {
                             "xml": "<access origin=\"https://*.akamaihd.net\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"GooglePlus\"><param name=\"ios-package\" value=\"GooglePlus\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://accounts.google.com/*\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -118,6 +126,10 @@
                     "CFBundleURLTypes": [
                         {
                             "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb179021185898904</string></array></dict></array>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>REVERSED_CLIENT_ID</string><key>CFBundleURLSchemes</key><array><string>164249078900-u78lqheu8m9rq2dqj74v7l3htdq5jqt0.apps.googleusercontent.com</string></array></dict></array>",
                             "count": 1
                         }
                     ],
@@ -176,6 +188,10 @@
         "cordova-plugin-facebook4": {
             "APP_ID": "179021185898904",
             "APP_NAME": "6ad1a44eeed9236bd3af1679209557bb",
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-googleplus": {
+            "REVERSED_CLIENT_ID": "164249078900-u78lqheu8m9rq2dqj74v7l3htdq5jqt0.apps.googleusercontent.com",
             "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         }
     },
@@ -298,6 +314,14 @@
             "clobbers": [
                 "facebookConnectPlugin"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-googleplus/www/GooglePlus.js",
+            "id": "cordova-plugin-googleplus.GooglePlus",
+            "pluginId": "cordova-plugin-googleplus",
+            "clobbers": [
+                "window.plugins.googleplus"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -312,6 +336,7 @@
         "cordova-plugin-camera": "2.3.0",
         "cordova-plugin-x-toast": "2.5.2",
         "com.synconset.imagepicker": "2.1.5",
-        "cordova-plugin-facebook4": "1.7.4"
+        "cordova-plugin-facebook4": "1.7.4",
+        "cordova-plugin-googleplus": "5.1.1"
     }
 }
