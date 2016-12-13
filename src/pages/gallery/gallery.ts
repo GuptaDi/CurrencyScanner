@@ -11,10 +11,10 @@ import {AppServices} from '../../app/app.services';
 declare var plugins: any;
 
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html'
+  selector: 'page-gallery',
+  templateUrl: 'gallery.html'
 })
-export class ContactPage {
+export class GalleryPage {
 	base64Image: string;
 
   constructor(public navCtrl: NavController) {

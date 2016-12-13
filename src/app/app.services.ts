@@ -17,7 +17,7 @@ getLabelData(img){
           // headers.append('Access-Control-Allow-Origin','chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop');
           // head.append('access-control-expose-headers','content-encoding,date,server,content-length');
 
-img = 'gs://currencybucket/44998-xgbtzfrwwn-1478662483.jpg';
+//img = 'gs://currencybucket/44998-xgbtzfrwwn-1478662483.jpg';
      var jsonRequest=       {
  "requests": [
   {
@@ -27,9 +27,7 @@ img = 'gs://currencybucket/44998-xgbtzfrwwn-1478662483.jpg';
     }
    ],
    "image": {
-    "source": {
-     "gcsImageUri": img
-    }
+    "content":img
    }
   }
  ]
@@ -37,9 +35,9 @@ img = 'gs://currencybucket/44998-xgbtzfrwwn-1478662483.jpg';
 
          //options = new RequestOptions({ headers: headers });
 
-let options = new RequestOptions({ headers: head, body:jsonRequest });
-		var url = 'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAj2KwSa-zeC8VlbBtbJuzpa3MHjFkTbQI';//https://jsonplaceholder.typicode.com/posts';//http://54.172.239.235:8080/MongoRestServices/rest/';//https://vision.googleapis.com/v1/images:annotate?key=AIzaSyA_MNQjvt8f9MO0h87G_KdmFABolddEJ4M';
-         return this.http.post(url, jsonRequest).map(res => res.json());
+ let options = new RequestOptions({ headers: head, body:jsonRequest });
+ 		var url = 'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAj2KwSa-zeC8VlbBtbJuzpa3MHjFkTbQI';//https://jsonplaceholder.typicode.com/posts';//http://54.172.239.235:8080/MongoRestServices/rest/';//https://vision.googleapis.com/v1/images:annotate?key=AIzaSyA_MNQjvt8f9MO0h87G_KdmFABolddEJ4M';
+          return this.http.post(url, jsonRequest).map(res => res.json());
 
     //      var url = 'https://jsonplaceholder.typicode.com/posts';
     //      return this.http.get(url,{

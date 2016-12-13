@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { Camera } from 'ionic-native';
@@ -9,18 +9,21 @@ import {AppServices} from '../../app/app.services';
 
 declare var plugins: any;
 
+
+
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-camera',
+  templateUrl: 'camera.html'
 })
 
 
 
-export class AboutPage {
+export class CameraPage {
 
   base64Image: string;
   allposts = null;
-
+private fileReader: FileReader;
+ private base64Encoded: string;
  static posts : Post[];
 
 labelData: string;
@@ -30,22 +33,44 @@ textData:string;
 private appServiceCall: any;
 private testData: any;
 
-getBase64Image(imgElem) {
-// imgElem must be on the same server otherwise a cross-origin error will be thrown "SECURITY_ERR: DOM Exception 18"
-    var canvas = document.createElement("canvas");
-    canvas.width = imgElem.clientWidth;
-    canvas.height = imgElem.clientHeight;
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(imgElem, 0, 0);
-    var dataURL = canvas.toDataURL("image/png");
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+getDataUri(url, callback) {
+    var image = new Image();
+
+    image.onload = function () {
+        var canvas = document.createElement('canvas');
+        canvas.width = this.naturalWidth; // or 'width' if you want a special/scaled size
+        canvas.height = this.naturalHeight; // or 'height' if you want a special/scaled size
+
+        canvas.getContext('2d').drawImage(this, 0, 0);
+
+        // Get raw image data
+        callback(canvas.toDataURL('image/jpg').replace(/^data:image\/(png|jpg);base64,/, ''));
+
+        // ... or get as Data URI
+        //callback(canvas.toDataURL('image/jpg'));
+    };
+
+    image.src = url;
 }
 
 
   constructor(public navCtrl: NavController,private appService: AppServices) {
     console.log("Response is 1");
 
-      this.appServiceCall = appService;
+    
+//       this.getDataUri('', function(dataUri) {
+//     // Do whatever you'd like with the Data URI!
+//     //console.log("image output "+dataUri);
+//       appService.getLabelData(dataUri).subscribe(data => {
+//       this.labelData = data.responses[0].labelAnnotations[0].description;
+//        console.log(" POSTS -----");
+//        console.log(this.labelData);
+
+//       });
+// });
+
+    
+     this.appServiceCall = appService;
      //appService.getLabelData('note.JPG').subscribe(data => {this.posts = data});
      
     
@@ -55,17 +80,37 @@ getBase64Image(imgElem) {
     // console.log("Response is 3")
     // appService.getTextData('note.JPG').subscribe(data => {this.textData = data.responses[0].textAnnotations[0].description});
     //this.base64Image = '';
+    console.log(" Constructur ------ ");
   }
 
-  ionViewWillEnter() {
-       
 
-      this.testData = this.appServiceCall.getLabelData('note.JPG').subscribe(data => {
-      this.labelData = data.responses[0].labelAnnotations[0].description;
-console.log(" POSTS -----");
-       console.log(this.labelData);
+
+  
+
+  ionViewWillEnter() {
+    var me = this;
+       console.log("Ion Will Enter =---- ");
+       this.getDataUri('sample.png', function(dataUri) {
+    // Do whatever you'd like with the Data URI!
+    //console.log("image output "+dataUri);
+
+      me.appServiceCall.getLabelData(dataUri).subscribe(data => 
+      {
+      me.labelData = data.responses[0].labelAnnotations[0].description;
+
+       console.log(" POSTS -----");
+       console.log(me.labelData);
 
       });
+});
+
+
+//       this.testData = this.appServiceCall.getLabelData('note.JPG').subscribe(data => {
+//       this.labelData = data.responses[0].labelAnnotations[0].description;
+// console.log(" POSTS -----");
+//        console.log(this.labelData);
+
+//       });
        
      //console.log( this.posts );
 
@@ -102,11 +147,10 @@ console.log(" POSTS -----");
 
   } 
 
-  retriveData(){
 
-  }
-  
-  
+
+
+
 }
 
 interface Label{
