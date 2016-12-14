@@ -16230,7 +16230,7 @@ ion-spinner.spinner-paused svg {
 }
 
 .tabs-md .tabbar {
-  background: #afd8c8;
+  background: #f8f8f8;
 }
 
 .tabs-md .tab-button {
@@ -18648,7 +18648,7 @@ ion-footer .toolbar-ios:last-child .toolbar-background,
 
 .toolbar-background-md {
   border-color: #b2b2b2;
-  background: #afd8c8;
+  background: #f8f8f8;
 }
 
 .header-md::after,

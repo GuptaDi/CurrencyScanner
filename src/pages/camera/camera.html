@@ -10,7 +10,20 @@
 {{colorData}}
 {{textData}}
 {{posts.title}} -->
-    <ion-card>
+
+<ion-card>
+   <img [src]='base64Image' *ngIf="base64Image" />
+  <ion-card-content>
+    <ion-card-title>
+      {{news}}
+      </ion-card-title> 
+    <p>
+      {{description}}
+    </p>
+  </ion-card-content>
+</ion-card>
+
+    <!-- <ion-card>
         <ion-card-content>
             <div class="fileinput-preview thumbnail">
    
@@ -19,5 +32,5 @@
             
             </div>
         </ion-card-content>
-    </ion-card>
+    </ion-card> -->
 </ion-content>
