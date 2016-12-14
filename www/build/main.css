@@ -21749,6 +21749,10 @@ sub {
   }
 }
 
+page-home .toolbar-background-md {
+  background: #008000;
+}
+
 page-home .home-content {
   background: #e2fff4;
 }
