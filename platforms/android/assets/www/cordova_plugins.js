@@ -109,6 +109,14 @@ module.exports = [
         "clobbers": [
             "window.plugins.googleplus"
         ]
+    },
+    {
+        "id": "cordova-plugin-admobpro.AdMob",
+        "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
+        "pluginId": "cordova-plugin-admobpro",
+        "clobbers": [
+            "window.AdMob"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -126,7 +134,9 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.1",
     "com.synconset.imagepicker": "2.1.5",
     "cordova-plugin-facebook4": "1.7.4",
-    "cordova-plugin-googleplus": "5.1.1"
+    "cordova-plugin-googleplus": "5.1.1",
+    "cordova-plugin-extension": "1.5.1",
+    "cordova-plugin-admobpro": "2.25.0"
 };
 // BOTTOM OF METADATA
 });

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { Camera } from 'ionic-native';
 
 import {Http, Headers, RequestOptions} from '@angular/http';
@@ -41,6 +41,8 @@ export class CameraPage {
     private currency: string;
     private side: string;
 
+    public loadingCont: LoadingController;
+
     getDataUri(url, callback) {
         var image = new Image();
         console.log('Inside getDataUri' + url);
@@ -63,8 +65,9 @@ export class CameraPage {
     }
 
 
-    constructor(public navCtrl: NavController, private appService: AppServices) {
+    constructor(public navCtrl: NavController, private appService: AppServices, private loadingController: LoadingController) {
         console.log("Response is 1");
+        this.loadingCont = loadingController;
 
         this.base64Image = 'note.jpg'
         //       this.getDataUri('', function(dataUri) {
@@ -99,6 +102,8 @@ export class CameraPage {
         // Put here the code you want to execute
       Camera.getPicture({ quality: 50 }).then(
           (imageData) => {
+              this.news = '';
+              this.description = '';
               //this.base64Image = imageData;
               //console.log("Inside");
               var me = this;
@@ -114,12 +119,18 @@ export class CameraPage {
                     me.getDataUri(Uri.URI, function(dataUri) {
                         // Do whatever you'd like with the Data URI!
                          console.log("image output ");
-                         //console.log(dataUri);
+                         me.news = 'Scanning ...';
+                         this.description = '';
+                         let loader = me.loadingCont.create({
+                           content: ""
+                          });  
+                         loader.present();
+                         
 
                       me.appServiceCall.getLabelData(dataUri).subscribe(data => {
                             me.news = data.news;
                             me.description = data.description;
-
+                            loader.dismiss();
 
                             console.log(" Label Data ----- "+me.labelData);
                             console.log(data);

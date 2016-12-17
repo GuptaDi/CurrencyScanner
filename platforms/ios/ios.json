@@ -87,6 +87,10 @@
                         {
                             "xml": "<access origin=\"https://accounts.google.com/*\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"ios-package\" value=\"CDVAdMobPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -136,6 +140,10 @@
                     "NSAppTransportSecurity": [
                         {
                             "xml": "<dict><key>NSExceptionDomains</key><dict><key>facebook.com</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict><key>fbcdn.net</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict><key>akamaihd.net</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict></dict></dict>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
                             "count": 1
                         }
                     ],
@@ -192,6 +200,12 @@
         },
         "cordova-plugin-googleplus": {
             "REVERSED_CLIENT_ID": "164249078900-u78lqheu8m9rq2dqj74v7l3htdq5jqt0.apps.googleusercontent.com",
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-admobpro": {
             "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         }
     },
@@ -322,6 +336,14 @@
             "clobbers": [
                 "window.plugins.googleplus"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
+            "id": "cordova-plugin-admobpro.AdMob",
+            "pluginId": "cordova-plugin-admobpro",
+            "clobbers": [
+                "window.AdMob"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -337,6 +359,8 @@
         "cordova-plugin-x-toast": "2.5.2",
         "com.synconset.imagepicker": "2.1.5",
         "cordova-plugin-facebook4": "1.7.4",
-        "cordova-plugin-googleplus": "5.1.1"
+        "cordova-plugin-googleplus": "5.1.1",
+        "cordova-plugin-extension": "1.5.1",
+        "cordova-plugin-admobpro": "2.25.0"
     }
 }

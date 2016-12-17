@@ -24,7 +24,9 @@ import {AppServices} from './app.services';
   //  BusyModule
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      tabsPlacement: 'bottom'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -47,11 +47,17 @@
         "cordova-plugin-googleplus": {
             "REVERSED_CLIENT_ID": "164249078900-u78lqheu8m9rq2dqj74v7l3htdq5jqt0.apps.googleusercontent.com",
             "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
+        },
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         }
     }
 }

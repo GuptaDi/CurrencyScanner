@@ -109,5 +109,21 @@
         "variables": {
             "REVERSED_CLIENT_ID": "164249078900-u78lqheu8m9rq2dqj74v7l3htdq5jqt0.apps.googleusercontent.com"
         }
+    },
+    "cordova-plugin-admobpro": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-admobpro"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-extension": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-extension"
+        },
+        "is_top_level": false,
+        "variables": {}
     }
 }
