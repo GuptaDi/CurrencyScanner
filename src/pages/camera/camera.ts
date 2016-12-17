@@ -7,6 +7,8 @@ import {Http, Headers, RequestOptions} from '@angular/http';
 
 import {AppServices} from '../../app/app.services';
 
+import {Subscription} from 'rxjs';
+
 declare var plugins: any;
 
 
@@ -19,6 +21,8 @@ declare var plugins: any;
 
 
 export class CameraPage {
+
+    busy: Subscription;
 
     base64Image: string;
     allposts = null;
@@ -93,7 +97,7 @@ export class CameraPage {
     ionViewWillEnter() {
 
         // Put here the code you want to execute
-      Camera.getPicture({ quality: 100 }).then(
+      Camera.getPicture({ quality: 50 }).then(
           (imageData) => {
               //this.base64Image = imageData;
               //console.log("Inside");
@@ -109,89 +113,17 @@ export class CameraPage {
 
                     me.getDataUri(Uri.URI, function(dataUri) {
                         // Do whatever you'd like with the Data URI!
-                        // console.log("image output "+dataUri);
+                         console.log("image output ");
+                         //console.log(dataUri);
 
-                        me.appServiceCall.getLabelData(dataUri).subscribe(data => {
-                            me.labelData = data.responses[0].labelAnnotations[0].description;
+                      me.appServiceCall.getLabelData(dataUri).subscribe(data => {
+                            me.news = data.news;
+                            me.description = data.description;
 
-                            console.log(" POSTS -----");
-                            console.log(me.labelData);
-                            if (me.labelData == 'banknote') {
-                                me.news = 'Congratulations !!!';
-                                me.appService.getColorData(dataUri).subscribe(data => {
-                                    me.colorData = data.responses[0].imagePropertiesAnnotation.dominantColors.colors[0];
-                                    console.log('boolean value'+ me.appService.validateColor2000(me.colorData));
-                                    me.appService.validateColor2000(me.colorData)
-                                    if (me.appService.validateColor2000(me.colorData) == true) {
-                                        me.appService.getTextData(dataUri).subscribe(data => {
-                                            me.textData = data.responses[0].textAnnotations[0].description;
-                                            if (me.appService.validateObverse2000(me.textData)) {
-                                                me.valid2000Obverse();
-                                            } else if (me.appService.validateReverse2000(me.textData)) {
-                                                me.valid2000Reverse();
-                                            } else {
-                                                me.sorryBankNoteButNotValid();
-                                            }
-                                        });
-                                    }
-                                    else if (me.appService.validateColor500(me.colorData)) {
-                                        me.appService.getTextData(dataUri).subscribe(data => {
-                                            me.textData = data.responses[0].textAnnotations[0].description;
-                                            if (me.appService.validateObverse500(me.textData)) {
-                                                me.valid2000Obverse();
-                                            } else if (me.appService.validateReverse500(me.textData)) {
-                                                me.valid2000Reverse();
-                                            } else {
-                                                me.sorryBankNoteButNotValid();
-                                            }
-                                        });
-                                    }
-                                    else if (me.appService.validateColor100(me.colorData)) {
-                                        me.appService.getTextData(dataUri).subscribe(data => {
-                                            me.textData = data.responses[0].textAnnotations[0].description;
-                                            if (me.appService.validateObverse2000(me.textData)) {
-                                                me.valid2000Obverse();
-                                            } else if (me.appService.validateReverse2000(me.textData)) {
-                                                me.valid2000Reverse();
-                                            } else {
-                                                me.sorryBankNoteButNotValid();
-                                            }
-                                        });
-                                    }
-                                    else if (me.appService.validateColor50(me.colorData)) {
-                                        me.appService.getTextData(dataUri).subscribe(data => {
-                                            me.textData = data.responses[0].textAnnotations[0].description;
-                                            if (me.appService.validateObverse2000(me.textData)) {
-                                                me.valid2000Obverse();
-                                            } else if (me.appService.validateReverse2000(me.textData)) {
-                                                me.valid2000Reverse();
-                                            } else {
-                                                me.sorryBankNoteButNotValid();
-                                            }
-                                        });
-                                    }
-                                    else if (me.appService.validateColor10(me.colorData)) {
-                                        me.appService.getTextData(dataUri).subscribe(data => {
-                                            me.textData = data.responses[0].textAnnotations[0].description;
-                                            if (me.appService.validateObverse2000(me.textData)) {
-                                                me.valid2000Obverse();
-                                            } else if (me.appService.validateReverse2000(me.textData)) {
-                                                me.valid2000Reverse();
-                                            } else {
-                                                me.sorryBankNoteButNotValid();
-                                            }
-                                        });
-                                    }
-                                    else {
-                                        me.sorryBankNoteButNotValid();
-                                    }
-                                });
 
-                            }
-                            else {
-                                me.sorryNotBankNote(me.labelData);
-                            }
-
+                            console.log(" Label Data ----- "+me.labelData);
+                            console.log(data);
+           
                         });
                     });
 
@@ -207,30 +139,6 @@ export class CameraPage {
 
           }
       );
-
-    }
-
-
-
-    sorryNotBankNote(text) {
-        this.news = 'Sorry :-(';
-        this.description = 'Not a valid bank note, This is an image of ' + text;
-    }
-
-    sorryBankNoteButNotValid() {
-        this.news = 'Sorry :-(';
-        this.description = 'This is a bank note, but not a valid Indian currency';
-    }
-
-    valid2000Obverse() {
-        this.news = 'Congratulations :-)';
-        this.description = 'This is a valid ₹2000 note with obverse side';
-
-    }
-
-    valid2000Reverse() {
-        this.news = 'Congratulations :-)';
-        this.description = 'This is a valid ₹2000 note with reverse side';
 
     }
 
