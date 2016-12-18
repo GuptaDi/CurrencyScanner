@@ -11,6 +11,8 @@ import {AppServices} from '../../app/app.services';
 
 import { HomePage } from '../home/home';
 
+import { Network } from 'ionic-native';
+
 
 declare var plugins: any;
 declare var AdMob: any;
@@ -93,7 +95,7 @@ export class GalleryPage {
               console.log(imageData[0]);
               var me = this;
               plugins.imagecrop(function success(Uri) {
-
+                    me.news = '';
                     me.base64Image = Uri.URI;
                     console.log("Image path is " + me.base64Image);
                     //this.Uri = Uri;
@@ -136,7 +138,7 @@ export class GalleryPage {
 
                             console.log(" Label Data ----- "+me.labelData);
                             console.log(data);
-                        });
+                        }, err => {loader.dismiss(); me.news = 'No Connection Found !!!';});
                     });
            },
                   function fail() {

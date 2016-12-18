@@ -55,9 +55,6 @@ export class CameraPage {
 
             // Get raw image data
             callback(canvas.toDataURL('image/jpg').replace(/^data:image\/(png|jpg);base64,/, ''));
-
-            // ... or get as Data URI
-            //callback(canvas.toDataURL('image/jpg'));
         };
 
         image.src = url;
@@ -71,27 +68,8 @@ export class CameraPage {
 
         this.base64Image = '';
         this.news = 'No image selected';
-        //       this.getDataUri('', function(dataUri) {
-        //     // Do whatever you'd like with the Data URI!
-        //     //console.log("image output "+dataUri);
-        //       appService.getLabelData(dataUri).subscribe(data => {
-        //       this.labelData = data.responses[0].labelAnnotations[0].description;
-        //        console.log(" POSTS -----");
-        //    console.log(this.labelData);
-
-        //       });
-        // });
-
-
+       
         this.appServiceCall = appService;
-        //appService.getLabelData('note.JPG').subscribe(data => {this.posts = data}    
-        //appService.getLabelData('note.JPG').subscribe(data => {this.labelData = data.responses[0].labelAnnotations[0].description});
-        // console.log("Response is 2"+ this.labelData);
-        // appService.getColorData('note.JPG').subscribe(data => {this.colorData = data.responses[0].imagePropertiesAnnotation.dominantColors.colors[0].score});
-        // console.log("Response is 3")
-        // appService.getTextData('note.JPG').subscribe(data => {this.textData = data.responses[0].textAnnotations[0].description});
-        //this.base64Image = '';
-        console.log(" Constructur ------ ");
     }
 
 
@@ -108,22 +86,22 @@ export class CameraPage {
              
               var me = this;
               plugins.imagecrop(function success(Uri) {
-
+                    me.news = '';
                     me.base64Image = Uri.URI;
                     console.log("Image path is " + me.base64Image);
                     //this.Uri = Uri;
                     console.log("Uri is :");
                     me.news = 'Scanning ...';
                     //console.log(Uri);
-
+                    let loader = me.loadingCont.create({
+                           content: ""
+                          });  
+                     loader.present();
 
                     me.getDataUri(Uri.URI, function(dataUri) {
                         // Do whatever you'd like with the Data URI!
                          console.log("image output ");
-                         let loader = me.loadingCont.create({
-                           content: ""
-                          });  
-                         loader.present();
+                         
                          
 
                       me.appServiceCall.getLabelData(dataUri).subscribe(data => {
@@ -134,11 +112,8 @@ export class CameraPage {
                             console.log(" Label Data ----- "+me.labelData);
                             console.log(data);
            
-                        });
+                        }, err => {loader.dismiss(); me.news = 'No Connection Found !!!';});
                     });
-
-
-                    //base64Image = Uri;
               },
                   function fail() {
                       error => console.error("Error cropping image", error)

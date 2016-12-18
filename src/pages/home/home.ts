@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Camera } from 'ionic-native';
 import { NavController, Platform } from 'ionic-angular';
 import {TipsPage} from '../tips/tips';
+//import { Router } from '@angular/router';
 
 declare var AdMob: any;
 @Component({
@@ -10,7 +11,9 @@ declare var AdMob: any;
 })
 export class HomePage {
 	private admobId: any;
- 
+  //private admobId: any;
+  tipsPage: any = TipsPage;
+  
   constructor(public navCtrl: NavController, private platform: Platform) {
     this.navCtrl = navCtrl;
 
@@ -21,7 +24,7 @@ export class HomePage {
                 interstitial: 'ca-app-pub-6681011345775847/4476030018'
             };
         }
-	/*tipsPage = TipsPage;
+	//this.tipsPage = TipsPage;
       this.platform.ready().then(() => {
             if(AdMob) {
                 AdMob.createBanner({
@@ -38,6 +41,6 @@ export class HomePage {
 			if(AdMob) AdMob.showInterstitial();
          
         });  
-        */
+        
   }
 }

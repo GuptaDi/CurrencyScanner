@@ -47,6 +47,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         }
     },
     "dependent_plugins": {
