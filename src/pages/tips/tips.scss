@@ -1,9 +1,16 @@
 page-tips {
 
-.custom-icon {
-  	font-size: 34px;
-	color: #7FFF00;
+.custom-icon,.custom-icon-close {
+  	font-size: 50px;
 	z-index: 1;
+	position: absolute;
+	padding-left:40%;
+}
+.custom-icon {
+		color: #7FFF00;
+}
+.custom-icon-close{
+	color: red;
 }
 
 }

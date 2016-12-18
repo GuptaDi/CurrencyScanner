@@ -15,6 +15,10 @@
 <ion-grid>
   <ion-row *ngFor="let row of grid">
     <ion-col width-50 *ngFor="let file_uri of row;let i = index;" >
+        <ion-icon ios="ios-close-circle" md="md-close-circle" class="custom-icon-close" *ngIf="i == '0'" ></ion-icon>
+      
+        <ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle" class="custom-icon" *ngIf="i == '1'"></ion-icon>
+      
       <img [src]="file_uri">
     </ion-col>
   </ion-row>
