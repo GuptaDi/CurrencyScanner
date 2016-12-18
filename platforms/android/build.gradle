@@ -90,6 +90,7 @@ ext {
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "com.synconset.imagepicker/realcurrencydetector-ignorelinterrors.gradle"
 apply from: "com.synconset.imagepicker/realcurrencydetector-androidtarget.gradle"
+apply from: "cordova-plugin-ImageCrop/realcurrencydetector-imagecrop.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -251,13 +252,12 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile(project(path: "CordovaLib", configuration: "debug"))
     releaseCompile(project(path: "CordovaLib", configuration: "release"))
-    compile "com.theartofdev.edmodo:android-image-cropper:2.3.1"
-    compile "com.android.support:appcompat-v7:24.2.1"
     compile "com.android.support:appcompat-v7:23+"
+    compile "com.android.support:appcompat-v7:24.2.1"
+    compile "com.google.android.gms:play-services-ads:+"
     compile "com.facebook.android:facebook-android-sdk:4.14.+"
     compile "com.google.android.gms:play-services-auth:+"
     compile "com.google.android.gms:play-services-identity:+"
-    compile "com.google.android.gms:play-services-ads:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

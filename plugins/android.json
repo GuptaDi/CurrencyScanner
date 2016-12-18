@@ -7,34 +7,22 @@
         "files": {}
     },
     "installed_plugins": {
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
         "cordova-plugin-ImageCrop": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         },
         "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
-        },
-        "cordova-plugin-x-toast": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
-        },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
-        },
-        "com.synconset.imagepicker": {
             "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         },
         "cordova-plugin-facebook4": {
@@ -45,15 +33,27 @@
         "cordova-plugin-googleplus": {
             "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         },
-        "cordova-plugin-admobpro": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.ionicframework.currencyscanner950549"
-        },
         "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
+        },
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.hashdev.realcurrencydetector"
         }
     }

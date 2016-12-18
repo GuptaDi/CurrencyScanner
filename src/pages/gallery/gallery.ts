@@ -69,38 +69,25 @@ export class GalleryPage {
         console.log("Response is 1");
         this.navCtrl = nav;
         this.loadingCont = loadingController;
-        this.base64Image = 'note.jpg'
-        this.news = '';
+        this.base64Image = ''
+        this.news = 'No image selected';
         this.description = '';
         this.platform = platform;
-        
-        //    this.getDataUri('', function(dataUri) {
-        //    Do whatever you'd like with the Data URI!
-        //    console.log("image output "+dataUri);
-        //    appService.getLabelData(dataUri).subscribe(data => {
-        //    this.labelData = data.responses[0].labelAnnotations[0].description;
-        //    console.log(" POSTS -----");
-        //    console.log(this.labelData);
-        // });
 
+        
+       
 
         this.appServiceCall = appService;
-        //appService.getLabelData('note.JPG').subscribe(data => {this.posts = data}    
-        //appService.getLabelData('note.JPG').subscribe(data => {this.labelData = data.responses[0].labelAnnotations[0].description});
-        // console.log("Response is 2"+ this.labelData);
-        // appService.getColorData('note.JPG').subscribe(data => {this.colorData = data.responses[0].imagePropertiesAnnotation.dominantColors.colors[0].score});
-        // console.log("Response is 3")
-        // appService.getTextData('note.JPG').subscribe(data => {this.textData = data.responses[0].textAnnotations[0].description});
-        //this.base64Image = '';
-        console.log(" Constructur ------ ");
+       
     }
     ionViewWillEnter() {
-
+        
         // Put here the code you want to execute
-        ImagePicker.getPictures({maximumImagesCount:1, quality: 100 }).then(
+        ImagePicker.getPictures({maximumImagesCount:1, quality: 10 }).then(
             (imageData) => {
                 this.news = '';
                 this.description = '';
+                this.news = 'No image selected';
               //this.base64Image = imageData;
               console.log("Inside ionViewWillEnter() ");
               console.log(imageData[0]);
@@ -123,13 +110,13 @@ export class GalleryPage {
                     me.getDataUri(Uri.URI, function(dataUri) {
                         // Do whatever you'd like with the Data URI!
                          console.log("image output ");
+
                          //console.log(dataUri);
 
                         me.appServiceCall.getLabelData(dataUri).subscribe(data => {
                             me.news = data.news;
                             me.description = data.description;
                             loader.dismiss();
-
                             if(/(android)/i.test(navigator.userAgent)) {
                                         me.admobId = {
                                             interstitial: 'ca-app-pub-6681011345775847/4476030018'
@@ -155,7 +142,7 @@ export class GalleryPage {
                   function fail() {
                       this.navCtrl.setRoot(HomePage);
                       error => console.error("Error cropping image", error)
-                  }, imageData[0], { quality: 100 })
+                  }, imageData[0], { quality: 10 })
 
           },
           (err) => {

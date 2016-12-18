@@ -23,7 +23,9 @@ export class AppServices {
         //options = new RequestOptions({ headers: headers });
 
         //let options = new RequestOptions({ headers: head, body: jsonRequest });
-         var url = 'http://192.168.0.102:8080/CurrencyDetectorRestServices/rest/img/';
+         //var url = 'http://54.172.239.235:8080/CurrencyDetectorRestServices/rest/img/';
+         var url = 'http://192.168.0.104:8080/CurrencyDetectorRestServices/rest/img/';
+         
        // var url = 'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAj2KwSa-zeC8VlbBtbJuzpa3MHjFkTbQI';//https://jsonplaceholder.typicode.com/posts';//http://54.172.239.235:8080/MongoRestServices/rest/';//https://vision.googleapis.com/v1/images:annotate?key=AIzaSyA_MNQjvt8f9MO0h87G_KdmFABolddEJ4M';
         return this.http.post(url, img).map(res => res.json());
 

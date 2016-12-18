@@ -69,7 +69,8 @@ export class CameraPage {
         console.log("Response is 1");
         this.loadingCont = loadingController;
 
-        this.base64Image = 'note.jpg'
+        this.base64Image = '';
+        this.news = 'No image selected';
         //       this.getDataUri('', function(dataUri) {
         //     // Do whatever you'd like with the Data URI!
         //     //console.log("image output "+dataUri);
@@ -100,12 +101,11 @@ export class CameraPage {
     ionViewWillEnter() {
 
         // Put here the code you want to execute
-      Camera.getPicture({ quality: 50 }).then(
+      Camera.getPicture({ quality: 10 }).then(
           (imageData) => {
-              this.news = '';
               this.description = '';
-              //this.base64Image = imageData;
-              //console.log("Inside");
+              this.news = 'No image selected';
+             
               var me = this;
               plugins.imagecrop(function success(Uri) {
 
@@ -113,14 +113,13 @@ export class CameraPage {
                     console.log("Image path is " + me.base64Image);
                     //this.Uri = Uri;
                     console.log("Uri is :");
+                    me.news = 'Scanning ...';
                     //console.log(Uri);
 
 
                     me.getDataUri(Uri.URI, function(dataUri) {
                         // Do whatever you'd like with the Data URI!
                          console.log("image output ");
-                         me.news = 'Scanning ...';
-                         this.description = '';
                          let loader = me.loadingCont.create({
                            content: ""
                           });  
@@ -143,7 +142,7 @@ export class CameraPage {
               },
                   function fail() {
                       error => console.error("Error cropping image", error)
-                  }, imageData, { quality: 100 })
+                  }, imageData, { quality: 10 })
 
           },
           (err) => {

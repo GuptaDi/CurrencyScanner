@@ -1,11 +1,27 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "id": "com.synconset.imagepicker.ImagePicker",
+        "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
+        "pluginId": "com.synconset.imagepicker",
+        "clobbers": [
+            "plugins.imagePicker"
+        ]
+    },
+    {
         "id": "cordova-plugin-ImageCrop.ImageCropPlugin",
         "file": "plugins/cordova-plugin-ImageCrop/www/imagecrop.js",
         "pluginId": "cordova-plugin-ImageCrop",
         "clobbers": [
             "plugins.imagecrop"
+        ]
+    },
+    {
+        "id": "cordova-plugin-admobpro.AdMob",
+        "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
+        "pluginId": "cordova-plugin-admobpro",
+        "clobbers": [
+            "window.AdMob"
         ]
     },
     {
@@ -49,6 +65,22 @@ module.exports = [
         ]
     },
     {
+        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+        "pluginId": "cordova-plugin-facebook4",
+        "clobbers": [
+            "facebookConnectPlugin"
+        ]
+    },
+    {
+        "id": "cordova-plugin-googleplus.GooglePlus",
+        "file": "plugins/cordova-plugin-googleplus/www/GooglePlus.js",
+        "pluginId": "cordova-plugin-googleplus",
+        "clobbers": [
+            "window.plugins.googleplus"
+        ]
+    },
+    {
         "id": "cordova-plugin-splashscreen.SplashScreen",
         "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
         "pluginId": "cordova-plugin-splashscreen",
@@ -85,58 +117,26 @@ module.exports = [
             "cordova.plugins.Keyboard"
         ],
         "runs": true
-    },
-    {
-        "id": "com.synconset.imagepicker.ImagePicker",
-        "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
-        "pluginId": "com.synconset.imagepicker",
-        "clobbers": [
-            "plugins.imagePicker"
-        ]
-    },
-    {
-        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
-        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
-        "pluginId": "cordova-plugin-facebook4",
-        "clobbers": [
-            "facebookConnectPlugin"
-        ]
-    },
-    {
-        "id": "cordova-plugin-googleplus.GooglePlus",
-        "file": "plugins/cordova-plugin-googleplus/www/GooglePlus.js",
-        "pluginId": "cordova-plugin-googleplus",
-        "clobbers": [
-            "window.plugins.googleplus"
-        ]
-    },
-    {
-        "id": "cordova-plugin-admobpro.AdMob",
-        "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
-        "pluginId": "cordova-plugin-admobpro",
-        "clobbers": [
-            "window.AdMob"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "com.synconset.imagepicker": "2.1.5",
     "cordova-plugin-ImageCrop": "1.0.4",
+    "cordova-plugin-extension": "1.5.1",
+    "cordova-plugin-admobpro": "2.25.0",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-camera": "2.3.0",
     "cordova-plugin-console": "1.0.4",
     "cordova-plugin-device": "1.1.3",
+    "cordova-plugin-facebook4": "1.7.4",
+    "cordova-plugin-googleplus": "5.1.1",
     "cordova-plugin-splashscreen": "4.0.0",
     "cordova-plugin-statusbar": "2.2.0",
     "cordova-plugin-whitelist": "1.3.0",
     "cordova-plugin-x-toast": "2.5.2",
-    "ionic-plugin-keyboard": "2.2.1",
-    "com.synconset.imagepicker": "2.1.5",
-    "cordova-plugin-facebook4": "1.7.4",
-    "cordova-plugin-googleplus": "5.1.1",
-    "cordova-plugin-extension": "1.5.1",
-    "cordova-plugin-admobpro": "2.25.0"
+    "ionic-plugin-keyboard": "2.2.1"
 };
 // BOTTOM OF METADATA
 });
