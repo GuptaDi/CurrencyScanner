@@ -29,6 +29,19 @@ $colors: (
   dark:       #222
 );
 
+/* Gradient effect accross the application */
+$layout-color1 : #185a9d;
+$layout-color2 : #43cea2;
+
+/* gradient backgrounds and reflections */
+@mixin app-layout-gradient($layout-color1, $layout-color2) {
+    background: $layout-color1;
+    background: -webkit-linear-gradient(to left, $layout-color1, $layout-color2);
+    background: -moz-linear-gradient(to left, $layout-color1, $layout-color2);
+    background: -o-linear-gradient(to left, $layout-color1, $layout-color2);
+    background: linear-gradient(to left, $layout-color1, $layout-color2);
+}
+
 
 // App iOS Variables
 // --------------------------------------------------

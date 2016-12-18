@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { CameraPage } from '../pages/camera/camera';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { HomePage } from '../pages/home/home';
+import { TipsPage } from '../pages/tips/tips';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { AuthService } from '../providers/auth-service';
@@ -20,6 +21,7 @@ import {AppServices} from './app.services';
     HomePage,
     TabsPage,
     LoginPage,
+    TipsPage,
     RegisterPage
   //  BusyModule
   ],
@@ -36,6 +38,7 @@ import {AppServices} from './app.services';
     HomePage,
     TabsPage,
     LoginPage,
+    TipsPage,
     RegisterPage
   ],
   providers: [AppServices,AuthService,{provide: ErrorHandler, useClass: IonicErrorHandler}]

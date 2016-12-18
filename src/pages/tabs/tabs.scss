@@ -1,9 +1,12 @@
-.tabs-md .tabbar {
-	background: #43cea2; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.tabs-md .tabbar,.toolbar-background-md {
+	@include app-layout-gradient($layout-color1,$layout-color2);
 }
-
 .tabs-md .tab-button{
 	color: rgba(0, 0, 0, 0.6);
 }
+  .content-md{
+  	background-color:#185a9d;
+  }
+ .toolbar-title-md{
+ 	color:#ffffff;
+ }
