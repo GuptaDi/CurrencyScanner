@@ -10,7 +10,6 @@ import { LoginPage } from '../pages/login/login';
 import { AuthService } from '../providers/auth-service';
 import { RegisterPage } from '../pages/register/register';
 import {AppServices} from './app.services';
-//import {BusyModule} from 'angular2-busy';
 
 
 @NgModule({

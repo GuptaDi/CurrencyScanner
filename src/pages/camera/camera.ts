@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 import { NavController, LoadingController } from 'ionic-angular';
 import { Camera } from 'ionic-native';
-
-import {Http, Headers, RequestOptions} from '@angular/http';
 
 import {AppServices} from '../../app/app.services';
 
@@ -25,22 +23,13 @@ export class CameraPage {
     busy: Subscription;
 
     base64Image: string;
-    allposts = null;
-    private fileReader: FileReader;
-    private base64Encoded: string;
-    static posts: Post[];
-
     labelData: string;
-    colorData: string;
-
-    textData: string;
+    
     private appServiceCall: any;
     private testData: any;
     news: string;
     description: string;
-    private currency: string;
-    private side: string;
-
+    
     public loadingCont: LoadingController;
 
     getDataUri(url, callback) {
@@ -91,10 +80,10 @@ export class CameraPage {
                     console.log("Image path is " + me.base64Image);
                     //this.Uri = Uri;
                     console.log("Uri is :");
-                    me.news = 'Scanning ...';
+                    me.news = '';
                     //console.log(Uri);
                     let loader = me.loadingCont.create({
-                           content: ""
+                           content: "Scanning ..."
                           });  
                      loader.present();
 

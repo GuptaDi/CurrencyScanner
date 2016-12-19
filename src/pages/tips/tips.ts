@@ -17,7 +17,7 @@ export class TipsPage {
   
   constructor(public navCtrl: NavController) {
   	this.images = [
-      "tips/tipscorrect1.png"
+      "tips/tipscorrect1.png",
   		"tips/tipswrong1.png",
   		"tips/tipscorrect2.png",
   		"tips/tipswrong2.png"

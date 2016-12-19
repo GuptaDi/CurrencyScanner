@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Camera } from 'ionic-native';
 import { NavController, Platform } from 'ionic-angular';
 import {TipsPage} from '../tips/tips';
-//import { Router } from '@angular/router';
 
 declare var AdMob: any;
 @Component({
@@ -24,8 +22,7 @@ export class HomePage {
                 interstitial: 'ca-app-pub-6681011345775847/4476030018'
             };
         }
-	//this.tipsPage = TipsPage;
-      this.platform.ready().then(() => {
+	    this.platform.ready().then(() => {
             if(AdMob) {
                 AdMob.createBanner({
                     adId: this.admobId.banner,
@@ -37,7 +34,6 @@ export class HomePage {
                 	autoShow:true
                 });
 
-			// show the interstitial later, e.g. at end of game level
 			if(AdMob) AdMob.showInterstitial();
          
         });  

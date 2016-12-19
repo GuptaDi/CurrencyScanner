@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { NavController, LoadingController, Platform} from 'ionic-angular';
-import { Camera } from 'ionic-native';
 
-import {Http, Headers, RequestOptions} from '@angular/http';
+import {Headers, RequestOptions} from '@angular/http';
 
 import { ImagePicker } from 'ionic-native';
 
@@ -26,21 +25,15 @@ export class GalleryPage {
     private admobId: any;
  
     base64Image: string;
-    allposts = null;
     private fileReader: FileReader;
-    private base64Encoded: string;
-    static posts: Post[];
 
     labelData: string;
     colorData: string;
 
     textData: string;
     private appServiceCall: any;
-    private testData: any;
     news: string;
     description: string;
-    private currency: string;
-    private side: string;
     public loadingCont: LoadingController;
     public navCtrl: NavController
 
@@ -57,8 +50,6 @@ export class GalleryPage {
             // Get raw image data
             callback(canvas.toDataURL('image/jpg').replace(/^data:image\/(png|jpg);base64,/, ''));
 
-            // ... or get as Data URI
-            //callback(canvas.toDataURL('image/jpg'));
         };
 
         image.src = url;
@@ -84,13 +75,11 @@ export class GalleryPage {
     }
     ionViewWillEnter() {
         
-        // Put here the code you want to execute
         ImagePicker.getPictures({maximumImagesCount:1, quality: 10 }).then(
             (imageData) => {
                 this.news = '';
                 this.description = '';
                 this.news = 'No image selected';
-              //this.base64Image = imageData;
               console.log("Inside ionViewWillEnter() ");
               console.log(imageData[0]);
               var me = this;
@@ -98,19 +87,15 @@ export class GalleryPage {
                     me.news = '';
                     me.base64Image = Uri.URI;
                     console.log("Image path is " + me.base64Image);
-                    //this.Uri = Uri;
                     console.log("Uri is :");
-                    //console.log(Uri);
-                  // me.nav.present(this.loading);
-                    me.news = 'Scanning ...';
+                    me.news = '';
                     me.description = '';
                     let loader = me.loadingCont.create({
-                       content: ""
+                       content: "Scanning..."
                         });  
                     loader.present();
 
                     me.getDataUri(Uri.URI, function(dataUri) {
-                        // Do whatever you'd like with the Data URI!
                          console.log("image output ");
 
                          //console.log(dataUri);
@@ -153,23 +138,4 @@ export class GalleryPage {
       );
 
     }
-}
-
-interface Label {
-    description: string;
-}
-
-interface Text {
-    description: string;
-}
-
-interface Color {
-    score: number;
-}
-
-
-interface Post {
-    id: number;
-    title: string;
-    body: string;
 }

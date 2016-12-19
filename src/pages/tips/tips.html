@@ -1,23 +1,21 @@
-<!--
-  Generated template for the Tips page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-  <ion-navbar>
-    <ion-title>Scanning Tips</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Scanning Tips</ion-title>
+    </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-
-<ion-grid>
-  <ion-row *ngFor="let row of grid">
-    <ion-col width-50 *ngFor="let file_uri of row;" >
-      <img [src]="file_uri">
-    </ion-col>
-  </ion-row>
-</ion-grid>
-
+    <ion-item-group text-wrap>
+        <ion-item-divider color="dark" style="font-weight: bold;">How to improve scanning</ion-item-divider>
+        <ion-item>Good lightning is most important. Use the flashlight if possible.</ion-item>
+        <ion-item >Blurry test is difficult to recognize. Make sure that the camera has properly focussed the text.</ion-item>
+        <ion-item>Camera with resolution of 5 to 7 megapixels is enough to get good results. The more higher resolution takes more time to scan.</ion-item>
+    </ion-item-group>
+    <ion-grid>
+        <ion-row *ngFor="let row of grid">
+            <ion-col width-50 *ngFor="let file_uri of row;">
+                <img [src]="file_uri">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    
 </ion-content>
