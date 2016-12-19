@@ -17,8 +17,9 @@ export class TipsPage {
   
   constructor(public navCtrl: NavController) {
   	this.images = [
+      "tips/tipscorrect1.png"
   		"tips/tipswrong1.png",
-  		"tips/tipscorrect1.png",
+  		"tips/tipscorrect2.png",
   		"tips/tipswrong2.png"
   	];
   	// define the size of grid. In our case, we are showing 3 rows
